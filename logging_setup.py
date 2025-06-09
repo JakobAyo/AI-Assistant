@@ -1,4 +1,3 @@
-# request_logger.py
 import logging
 from datetime import datetime
 from pathlib import Path
@@ -32,14 +31,3 @@ class RequestLogger:
     def generate_request_id():
         """Generate a unique ID for each request"""
         return datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-
-logger = RequestLogger()
-id = logger.generate_request_id()
-logger = logger.create_request_log(id)
-
-
-logger.info("Something1")
-logger.info("Something2")
-logger.info("Something3")
-logger.info("Something4")
-logger.info("Something5")
